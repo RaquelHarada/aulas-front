@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções do CSS</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cor-primaria: #96b9a7;
+            --cor-secundaria: #c0d4ca;
+            --cor-fundo: rgb(230, 224, 224);
+            --cor-texto: #333;
+            --espacamento-padrao: 1.5rem;
+            --raio-borda: 1000px;
+        }
+
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        article {
+            background-color: rgb(137, 175, 166);
+            border-radius: 55px;
+            padding: 1.5rem;
+            margin-inline: auto;
+            margin-block: 2rem;
+            width: min(90%, 900px);
+            padding: calc(1rem + 1vw);
+        }
+
+        article :is(h1, p) {
+            text-align: center;
+            border-radius: var(--raio-borda);
+            font-size: clamp(1rem, 3vw, 2rem);
+        }
+
+        main {
+            margin-block-end: 30px;
+            padding: max(1rem, 2vw);
+            background-color: white;
+            border-inline-start: solid 5px rgb(137, 175, 166);
+            border-inline-end: solid 5px rgb(137, 175, 166);
+            border-radius: 55px;
+        }
+
+        .explicacao {
+            padding: var(--espacamento-padrao);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+
+        <h1>Explicando funções do CSS</h1>
+        <p><b>min( ), max( ), calc( ), clamp( )</b></p>
+    </article>
+
+    <main>
+        <div class="explicacao">
+            <p>Funções utilizadas para criações de sites responsivos, criando um design fluído que se adeque a
+                necessidade
+                do
+                usuário. </p>
+
+            <hr>
+            <details>
+                <summary><b><i>min( )</i></b></summary>
+                <p>É utilizado para limitar o tamanho máximo de algo, sendo assim não permitindo que o valor proposto
+                    seja
+                    ultrapassado.</p>
+
+                <p><b>Exemplo:</b>width: min(90%, 900px); 90% se refere ao elemento PAI, tamanho da tela sendo flexível,
+                    e o
+                    900px é o limite máximo.</p>
+            </details>
+            <br>
+            <details>
+                <summary><b><i>max( )</i></b></summary>
+                <p>Diferente do min(), a função max() é utilizada para limitar o tamanho mínimo, selecionando o maior
+                    tamanho entre dois ou mais valores.</p>
+
+                <p><b>Exemplo:</b>padding: max(1rem, 2vw); 1rem serve como o mínimo seguro, e 2vw vai crecer conforme a
+                    tela
+                    aumenta.</p>
+            </details>
+            <br>
+            <details>
+                <summary><b><i>calc( )</i></b></summary>
+                <p>Utilizado para realizar cálculos matemáticos básicos, (+, -, *, /), podendo misturar diferentes
+                    unidades
+                    de medida (%, px, vw, etc.)</p>
+
+                <p><b>Exemplo:</b> padding: calc(1rem + 1vw); 1rem garante que padding nunca fique pequeno demais, 1vw
+                    fica
+                    proporcional ao tamanho da tela.</p>
+            </details>
+            <br>
+            <details>
+                <summary><b>clamp( )</b></summary>
+                <p>Função que seleciona um valor entre o min, max e o ideal, assim retornando ao valor ideal</p>
+
+                <p><b>Exemplo:</b> font-size: clamp(1rem, 3vw, 2rem); Começa no valor ideal (3vw)
+                    mínimo 1rem e máximo 2rem.
+                    Se passar de 32px → trava em 32px </p>
+            </details>
+        </div>
+
+    </main>
+</body>
+
+</html>

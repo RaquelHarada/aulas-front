@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Imagens no HTML</title>
+</head>
+<body>
+    <h1>Trabalhando com Imagens</h1>
+    <hr>
+    <h2>Formatos mais comuns</h2>
+    <dl>
+        <dt>JPEG/JPJ</dt>
+          <dd>Utilizado principalmente para fotos em geralcom milhão de cores e compressão.</dd>
+
+        <dt>GIF</dt>
+          <dd>Voltado para desenhos/ilustrações de poucas cores.
+         Suporta também animação e transparência.</dd>
+
+        <dt>PNG</dt>
+           <dd>Usado também para fotos com milhões de cores, com compressão e <b>suporte a transparência</b>.</dd>
+
+        <dt>WebP</dt>
+           <dd>Formato mais moderno, com suporte a milhões de cores, transpar~encia e animação.</dd>
+
+        <dt>SVG</dt>
+           <dd>Formato vetorial, ou seja, não tem problemas com redimensionamento. Muito comum para uso em logotipo e desenhos.</dd>
+</dl>
+
+<hr>
+
+<h2>Exemplos</h2>
+
+ <h3>Tags e atributos</h3>
+<!-- Sobre os atributos
+ src -> indica o caminho e o arquivo que será exibido
+ alt-> texto alternativo descrevendo brevemente a imagem (muito importante para a acessibilidade da imagem) -->
+
+<img src="imagens/pink-floyd.jpg" alt="Integrantes da banda pink floyd acenando para o público" width="600" height="375">
+
+ <h3>Imagens dentro de outras tags</h3>
+
+<p>
+    <img src="imagens/logo-php.jpg" alt="logotipo da linguagem PHP">
+</p>
+
+ <hr>
+
+<!-- Havendo espaço na tela, a imagem aparecem lado a lado  -->
+<div>
+    <img src="imagens/logo-html5.png" alt="">
+    <img src="imagens/logo-css3.gif" alt="">
+    <img src="imagens/logo-javascript.gif" alt="">
+</div>
+
+<!-- Nesta estrutura, mesmo que tenha espaço na tela, as imagens    ficarão uma abaixo da outra. -->
+<div><img src="imagens/logo-html5.png" alt=""></div>
+<div><img src="imagens/logo-css3.gif" alt=""></div>
+<div><img src="imagens/logo-javascript.gif" alt=""></div>
+
+ <hr>
+<!-- Havendo espaço, fica lado a lado.
+ Acabou o espaço? O layout "quebra", fazendo com que as imagens fiquem uma abaixo da outra.-->
+
+<div>
+    <img src="imagens/dedos.jpg" alt="">
+    <img src="imagens/pacoca.jpg" alt="">
+    <img src="imagens/ideias.jpg" alt="">
+</div>
+
+ <hr>
+
+ <h3> Imagens (ou ilustração em geral) com legenda</h3>
+
+<!-- HTML 5: com semântica (a imagem tem relação com a legenda) -->
+<figure>
+    <img src="imagens/stonehenge.jpg" alt="">
+    <figcaption>Foto tirada pela fotógrafa Pérola Cavalcante</figcaption>
+</figure>
+
+<!-- Antes do HTML 5: Um bloco genérico, com imagem e texto -->
+ <div>
+    <img src="imagens/stonehenge.jpg" alt="">
+    <p>Foto tirada pela fotógrafa Pérola Cavalcante</p>
+ </div>
+
+ <figure>
+    <img src="imagens/logo-php.jpg" alt="">
+    <img src="imagens/logo-mysql.gif" alt="">
+    <figcaption>Tecnologias do Back-End</figcaption>
+ </figure>
+
+ <h4>Tutorial de JavaScript</h4>
+ <!-- Aqui temos uma ilustração de código , com um contexto dado pelo figure/figcaption -->
+ <figure>
+    <pre>
+        <code>(nota1, nota2) => (nota1+nota2) / 2 </code>
+    </pre>
+    <figcaption>
+        Função JavaScript que recebe 2 parâmetros e realiza o cálculo matemático de média.
+    </figcaption>
+ </figure>
+
+ <hr>
+
+ <h3>Web vs JPEG</h3>
+<img src="imagens/montanhas.webp" alt="">]
+<img src="imagens/montanhas.jpg" alt="">  
+ <!-- Se possível, priorize o formato WebP por ser mais moderno e       otimizado (melhor peso vs qualidade), além de suportar transparência e naimação. -->
+
+ <h3>SVG: formato de vetor para web</h3>
+<img src="imagens/black-cat.png" alt="">
+<img src="imagens/black-cat.svg" alt="">
+</body>
+</html>

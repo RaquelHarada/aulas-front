@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .container {
+            border: 2px dashed #ccc;
+            padding: 10px;
+            display: grid;
+            gap: 10px;
+
+            /* Configuração Grid */
+            /* É comum o uso da unidade de medida "fr" (fração) para tornar flexível o tamanho dos itens do grid. */
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-template-columns: 100px repeat(2, 1fr);
+            grid-template-rows: 80px 100px;
+        }
+
+        .item {
+            background-color: rgb(141, 172, 141);
+            padding: 20px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .a {
+            background-color: rgb(192, 133, 91);
+            /* grid-row: 1;
+            grid-row-end: 3; */
+            grid-row: 1 / 3;
+        }
+
+        .b {
+            background-color: rgb(119, 119, 156);
+            /* grid-column-start: 2;
+            grid-column-end: 4; */
+            grid-column: 2 / 4;
+        }
+
+        .e {
+            background-color: rgb(156, 67, 67);
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grid Layout</h1>
+    <p>Grid Layout é um sistema nativo do CSS para estruturar e organizar layout bidimensional, ou seja, que utilize
+        <b>linhas</b> e <b>colunas</b> ao mesmo tempo.
+    </p>
+
+    <div class="container">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item e">E</div>
+    </div>
+</body>
+
+</html>

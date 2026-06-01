@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Listas</title>
+    <style>
+        /* Regras CSS */
+        h1 {
+            color: purple;
+        }
+
+        h2 {
+            color: darkgreen;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Neste caso, fica vermelho (e não roxo) pois foi aplicado uma regra INLINE (TEM PRIORIDADE) -->
+    <h1 style="color: red;">Trabalhando com listas</h1>
+    <hr>
+    <p>Listas são estruturas para representação de conteúdo na forma de uma <b>relação de itens</b></p>
+
+    <h2>Lista não-ordenada</h2>
+    <p>Relação em que a ordem <b>não importa</b>.</p>
+    <!-- ul -> unordered list -->
+    <!-- li -> list item -->
+    <ul>
+        <li>Teclado</li>
+        <li>Mouse</li>
+        <li>Monitor</li>
+        <li>Webcam</li>
+    </ul>
+
+    <h2>Lista ordenada</h2>
+    <p>Relação em que a ordem <b>importa</b>.</p>
+    <ol>
+        <li>Amanda</li>
+        <li>Bruna</li>
+        <li>Carlos</li>
+        <li>Fulano</li>
+    </ol>
+
+    <h2>Listas aninhadas (lista dentro de listas)</h2>
+
+    <ul>
+        <li>Mobile
+            <ul>
+                <li>iPhone 17</li>
+                <li>Galaxy S25</li>
+                <li>Moto G5</li>
+            </ul>
+        </li>
+        <li>Games
+            <ul>
+                <li>Minecraft</li>
+                <li>Pro Evolution</li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+
+</html>

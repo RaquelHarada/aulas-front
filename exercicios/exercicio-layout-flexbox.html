@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Layout Flexbox</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        nav {
+            background: linear-gradient(to bottom, #320b8d, #7209b7, #914391);
+            color: white;
+            display: flex;
+            font-family: sans-serif;
+            flex-direction: column;
+            float: left;
+            margin: 0;
+            padding: 35px
+        }
+
+        .nav h2 {
+            text-align: right;
+        }
+
+        nav a {
+            color: white;
+            display: flex;
+            text-decoration: solid;
+            font-size: 16px;
+            height: 200px;
+            padding: 30px;
+            text-align: left;
+
+        }
+
+        .container {
+            font-family: sans-serif;
+
+        }
+
+        header {
+            background: linear-gradient(to bottom, #f36d14, #d4a41f, #e62424);
+            color: white;
+            border-block-end: solid 10px;
+            min-height: 80px;
+            position: sticky;
+            display: flex;
+            font-family: sans-serif;
+            align-items: center;
+
+        }
+
+
+        .hero p {
+            color: black;
+            background-color: white;
+            margin: 50px 0;
+            display: block;
+            font-size: 14px;
+            align-items: start;
+
+        }
+
+        .cards article {
+            background-color: rgb(201, 201, 201);
+            border-radius: 10px;
+            padding: 5px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: nowrap;
+            margin-block: 10px;
+            align-items: center;
+
+        }
+
+
+
+        .atividades {
+            padding: 5px;
+            gap: 10px;
+            margin-block: 10px;
+            flex-shrink: 0;
+        }
+
+
+        #Ozzy {
+            background-color: rgb(228, 223, 223);
+            padding: 5px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: nowrap;
+            margin-block: 10px;
+        }
+
+        #Ronnie {
+            background-color: rgb(228, 223, 223);
+            padding: 5px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: nowrap;
+            margin-block: 10px;
+        }
+
+        #Ian {
+            background-color: rgb(228, 223, 223);
+            padding: 5px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: nowrap;
+            margin-block: 10px;
+        }
+
+        #Tony {
+            background-color: rgb(228, 223, 223);
+            padding: 5px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: nowrap;
+            margin-block: 10px;
+        }
+
+
+        .item h4 {
+            background-color: rgb(216, 166, 206);
+            padding: 20px;
+            text-align: start;
+            flex-basis: 10px;
+        }
+
+        .item p {
+            background-color: rgb(162, 231, 162);
+            text-align: center;
+            padding: 20px;
+            text-align: start;
+            flex-basis: 10px;
+            flex-grow: 1;
+            flex-shrink: 0;
+            align-self: center;
+        }
+
+        .item time {
+            background-color: rgb(147, 226, 236);
+            padding: 20px;
+            text-align: start;
+            flex-basis: 10px;
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="tudo">
+        <h2>Painel</h2>
+        <a href="Dashboard">Dashboard</a>
+        <a href="Usuários">Usuários</a>
+        <a href="Relatórios">Relatórios</a>
+        <a href="Configurações">Configurações</a>
+    </nav>
+    <div class="container">
+        <header class="hero">
+            <h1>Visão Geral</h1>
+            <p>🔓 Admin</p>
+        </header>
+        <main>
+            <section class="cards">
+                <article id="us">
+                    <h3>Usuários</h3>
+                    <p>1200</p>
+                </article>
+                <article id="ve">
+                    <h3>Vendas</h3>
+                    <p>R$8.500</p>
+                </article>
+                <article id="ac">
+                    <h3>Acessos</h3>
+                    <p>3.200</p>
+                </article>
+            </section>
+            <section>
+                <h3>Últimas atividades</h3>
+                <div class="atividades">
+                    <article class="item" id="Ozzy">
+                        <h4>Ozzy Osbourne</h4>
+                        <p>Comprou um curso avançado de JS</p>
+                        <time datetime="Hoje">Hoje</time>
+                    </article>
+                    <article class="item" id="Ronnie">
+                        <h4>Ronnie James Dio</h4>
+                        <p>Atualizou o perfil com novas informações</p>
+                        <time datetime="Ontem">Ontem</time>
+                    </article>
+                    <article class="item" id="Ian">
+                        <h4>Ian Gillan</h4>
+                        <p>Fez login no sistema</p>
+                        <time datetime="dias atrás">dias atrás</time>
+                    </article>
+                    <article class="item" id="Tony">
+                        <h4>Tony Martin</h4>
+                        <p>Solicitou suporte técnico</p>
+                        <time datetime="3 dias atrás">3 dias atrás</time>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

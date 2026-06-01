@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis no CSS</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* Declarando variáveis no seletor :root 
+        O root representa a raiz HTML do documento.
+        é o nível mais alto. Portanto, as variáveis declaradas aqui, podem ser usadas em qualquer lugar da página. */
+        :root {
+            --cor-primaria: #ad55c3;
+            --cor-secundaria: rgba(188, 130, 175, 0.541);
+            --cor-fundo: rgb(248, 225, 225);
+            --cor-texto: #333;
+            --espacamento-padrao: 1.5rem;
+            --raio-borda: 8px;
+        }
+
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .explicacao {
+            /* Redeclaração da variável, ou seja, ela passa a valer APENAS neste escopo/regra */
+            --cor-primaria: rgb(131, 89, 180);
+
+            background-color: white;
+            padding: var(--espacamento-padrao);
+        }
+
+        h2, a {
+            color: var(--cor-primaria);
+        }
+
+        h2 {
+            background-color: var(--cor-fundo);
+            padding: var(--espacamento-padrao);
+            border-radius: var(--raio-borda);
+            text-align: center;
+        }
+
+        a {
+            background-color: var(--cor-secundaria);
+            text-decoration: none;
+            padding-inline: var(--espacamento-padrao);
+            border-radius: var(--raio-borda);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Trabalhando com variáveis</h1>
+    <div class="explicacao">
+        <h2>O poder das variáveis</h2>
+        <p>As variáveis (ou Custom Properties) tornam o código CSS mais fácil de manter e organizar, principalmente
+            quando se precisa mudar aspectos visuais de acordo com alguma preferência ou interação do usuário (exemplo:
+            mudança na paleta de cores ou tema visual). </p>
+        <p>Exemplo: se quisermos mudar a cor do link abaixo e do título, basta alterar apenas a variável que define a
+            cor desses elementos.</p>
+    </div>
+    <p><a href="">Link Qualquer</a></p>
+</body>
+
+</html>

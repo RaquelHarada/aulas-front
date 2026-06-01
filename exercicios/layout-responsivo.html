@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout responsivo</title>
+</head>
+<style>
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 16px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background: rgb(252, 238, 214);
+    }
+
+    body,
+    h1,
+    h2,
+    p {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    /* Header full width */
+    header {
+        background: pink;
+        padding: 1rem;
+        text-align: center;
+        position: sticky;
+        top: 0;
+    }
+
+    nav {
+        margin-block-start: 1rem;
+    }
+
+    nav a {
+        background: white;
+        color: black;
+        /* padding: 0.75rem 1rem; */
+        padding-block: 0.75rem;
+        padding-inline: 1rem;
+        text-decoration: none;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .a {
+        background-color: rgb(171, 223, 171);
+    }
+
+    .b {
+        background-color: rgb(141, 184, 201);
+    }
+
+    .c {
+        background-color: rgb(236, 247, 141);
+    }
+
+    h2,
+    p {
+        padding: 0.5rem;
+    }
+
+    footer {
+        background: pink;
+    }
+
+    /* Estilos condicionais (media queries) 
+    LEMBRETE: ao trabalhar com mobile first, as medias queries utilizam a propriedade min-width na condição.*/
+
+    /* MOBILE FIRST 
+    min width (maior ou igual) (a partir de ) 
+    DESKTOP FIRST
+    max width (menor ou igual) (até) */
+
+    @media (min-width: 705px) {
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            margin: 0;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        main {
+            width: 100%;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Cuidado ao definir tamanho para os elementos flex. Se usarmos gap no elemento pai (main), o tamanho dos filhos sofrerá interferência. Você pode usar calc para calcular/compensar essa interferência. */
+        .a {
+            flex-basis: calc(60% - 0.5rem);
+        }
+
+        .b {
+            flex-basis: calc(40% - 0.5rem);
+        }
+
+        .c {
+            flex-basis: 100%;
+        }
+    }
+
+    @media (min-width: 953px) {
+        header {
+            position: static;
+        }
+
+        main {
+            max-width: 1000px;
+            margin-inline: auto;
+        }
+
+        .a, .b, .c {
+            flex-basis: calc(33.33% - 1rem);
+            flex-grow: 0;
+        }
+
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Layout Responsivo</h1>
+        <nav><a href="Link">Link</a><a href="Link">Link</a><a href="Link">Link</a></nav>
+    </header>
+    <main>
+        <article class="a">
+            <h2>Coluna A</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dicta magnam nemo ullam, doloremque
+                eaque tempora eos quia voluptate quam. Amet, saepe. Ducimus laudantium dicta autem veritatis sunt
+                perferendis rem! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, fuga
+                consequuntur officiis cum ipsam velit asperiores commodi dolore voluptates beatae est laboriosam
+                corrupti et a quod facere, omnis quos expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia ullam quis ratione laudantium eum nesciunt, corporis consequuntur dignissimos laborum sit illo
+                assumenda quo, doloremque aliquam quod molestiae magni, est veritatis.</p>
+        </article>
+        <article class="b">
+            <h2>Coluna B</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptatibus, omnis assumenda amet nam
+                sunt ab quis temporibus iste quas similique, pariatur corrupti hic modi quasi totam quibusdam eius
+                porro. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, numquam dolore sit veniam eum
+                alias necessitatibus! Corporis accusantium nobis error impedit ut, voluptas voluptates doloremque ipsam,
+                rem cum quae obcaecati! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, modi.
+                Necessitatibus sit non laborum officiis delectus omnis consequuntur nostrum, aspernatur, alias explicabo
+                atque et. Omnis corporis enim quod voluptate nisi.</p>
+        </article>
+        <article class="c">
+            <h2>Coluna C</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci assumenda deleniti eius a optio
+                fugiat, et tempore laborum odit consequuntur dolorem atque, sequi exercitationem neque voluptas amet ab
+                minima architecto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, odio. brAlias nisi
+                laudantium vel est dolorem possimus fuga rerum, autem quaerat odio nobis aliquam? Doloremque odio
+                obcaecati odit excepturi quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                voluptatem nesciunt hic culpa ad atque dignissimos voluptates perferendis ratione laborum autem
+                consequatur, voluptate minus blanditiis ut, quasi tenetur soluta dolorem?</p>
+        </article>
+    </main>
+    <footer>
+        <h2>Rodapé</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </footer>
+
+</body>
+
+</html>
